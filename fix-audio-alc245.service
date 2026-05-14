@@ -1,0 +1,11 @@
+[Unit]
+Description=Fix ALC245 audio codec (Minisforum X1 AI Pro)
+After=sound.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/fix-audio-alc245.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
